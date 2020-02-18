@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var http=require('http').createServer(app);
 var io=require('socket.io')(http);
+const cors = require('cors');
+app.use(cors({orign:'*'}));
 
 io.on('connection', function(socket) {
    console.log('connected')
