@@ -24,7 +24,7 @@ io.on('connection', function(socket) {
    }
 )});
 
-var server = http.listen(5000, function () {
+var server = http.listen(process.env.PORT || 3000, function () {
     console.log('Server is running..');
 });
 
